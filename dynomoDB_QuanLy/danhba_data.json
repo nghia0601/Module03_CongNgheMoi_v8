@@ -1,0 +1,103 @@
+[
+    {
+        "MaDanhBa":"LoiNghia",
+        "TrangThai":"Đã Chấp Nhận",
+        "TenDN":"Loi",
+        "TenKhach":"Nghia",
+        "BietDanh":"Hoang Nghia",
+        "MaChat":"NghiaLoi"
+    },
+    {
+        "MaDanhBa":"NghiaLoi",
+        "TrangThai":"Đã Chấp Nhận",
+        "TenDN":"Nghia",
+        "TenKhach":"Loi",
+        "BietDanh":"Tạ Đức Lợi" ,
+        "MaChat":"NghiaLoi"
+    },
+    {
+        "MaDanhBa":"LoiDuong",
+        "TrangThai":"Đã Chấp Nhận",
+        "TenDN":"Loi",
+        "TenKhach":"Duong",
+        "BietDanh":"Minh Duong" ,
+        "MaChat":"LoiDuong"
+    },
+    {
+        "MaDanhBa":"DuongLoi",
+        "TrangThai":"Đã Chấp Nhận",
+        "TenDN":"Duong",
+        "TenKhach":"Loi",
+        "BietDanh":"Tạ Đức Lợi" ,
+        "MaChat":"LoiDuong"
+    },
+    {
+        "MaDanhBa":"LoiBinh",
+        "TrangThai":"Chưa Chấp Nhận",
+        "TenDN":"Loi",
+        "TenKhach":"Binh",
+        "BietDanh":"Van Binh",
+        "MaChat":"LoiBinh"
+    },
+    {
+        "MaDanhBa":"DuongNghia",
+        "TrangThai":"Chưa Chấp Nhận",
+        "TenDN":"Duong",
+        "TenKhach":"Nghia",
+        "BietDanh":"Hoang Nghia" ,
+        "MaChat":"DuongNghia"
+    } ,
+     {
+        "MaDanhBa":"BinhNghia",
+        "TrangThai":"Chưa Chấp Nhận",
+        "TenDN":"Binh",
+        "TenKhach":"Nghia",
+        "BietDanh":"Hoang Nghia" ,
+        "MaChat":"BinhNghia"
+    },
+
+
+
+
+
+    {
+        "MaDanhBa":"Loi1",
+        "TrangThai":"Đã Chấp Nhận",
+        "TenDN":"Loi",
+        "TenKhach":"1",
+        "BietDanh":"Công Nghệ Mới" ,
+        "MaChat":"1"
+    },
+    {
+        "MaDanhBa":"Nghia1",
+        "TrangThai":"Đã Chấp Nhận",
+        "TenDN":"Nghia",
+        "TenKhach":"1",
+        "BietDanh":"Công Nghệ Mới",
+        "MaChat":"1"
+    },
+    {
+        "MaDanhBa":"Binh1",
+        "TrangThai":"Đã Chấp Nhận",
+        "TenDN":"Binh",
+        "TenKhach":"1",
+        "BietDanh":"Công Nghệ Mới" ,
+        "MaChat":"1"
+    },
+    {
+        "MaDanhBa":"Duong1",
+        "TrangThai":"Đã Chấp Nhận",
+        "TenDN":"Duong",
+        "TenKhach":"1",
+        "BietDanh":"Công Nghệ Mới" ,
+        "MaChat":"1"
+    },
+    {
+        "MaDanhBa":"Nguyen1",
+        "TrangThai":"Đã Chấp Nhận",
+        "TenDN":"Nguyen",
+        "TenKhach":"1",
+        "BietDanh":"Công Nghệ Mới" ,
+        "MaChat":"1"
+    }
+]

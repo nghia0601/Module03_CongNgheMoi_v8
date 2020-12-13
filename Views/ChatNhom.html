@@ -1,0 +1,492 @@
+<html lang="en">
+  <head></head>
+   <meta charset="UTF-8">
+ <meta name="apple-mobile-web-app-title" content="CodePen">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Forest Chat</title>
+   <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/chatNhom.js"></script>
+    <script src="/js/TaoNhom.js"></script>
+    <script src="/socket.io/socket.io.js"></script>       	
+       <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- EmojiOneArea -->
+ <link rel="stylesheet" type="text/css" href="/css/emojionearea.min.css">
+ <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="/js/emojionearea.min.js"></script>
+ <!-- EmojiOneArea -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+   
+ <style>
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
+ 
+ /*-------------------------------- END ----*/
+ .padding-0{
+    padding-right:0;
+    padding-left:0;
+    
+}
+a:hover{
+    text-decoration: none;
+    color: red;
+}
+.TimKiem {border-radius: 25px;}
+.ds:hover{
+   background-color: rgb(204, 212, 212);
+}
+.ds:focus{
+   background-color: rgb(226, 34, 34);
+}
+.ds:active{
+   background-color: rgb(127, 162, 165);
+}
+.row.no-Gutter [class*='col-']:not(:first-child),
+.row.no-Gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+ 
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+}
+     #body-row {
+         margin-left: 0;
+         margin-right: 0;
+     }
+ 
+     #sidebar-container {
+         min-height: 100vh;
+         background-color: #132644;
+         padding: 0;
+         /* flex: unset; */
+     }
+     
+     .sidebar-expanded {
+         width: 230px;
+     }
+     
+     .sidebar-collapsed {
+         /*width: 60px;*/
+         width: 100px;
+     }
+ 
+     /* ----------| Menu item*/    
+     #sidebar-container .list-group a {
+         height: 50px;
+         color: white;
+     }
+ 
+     /* ----------| Submenu item*/    
+     #sidebar-container .list-group li.list-group-item {
+         background-color: #132644;
+     }
+     
+     #sidebar-container .list-group .sidebar-submenu a {
+         height: 45px;
+         padding-left: 30px;
+     }
+     
+     .sidebar-submenu {
+         font-size: 0.9rem;
+     }
+     /* ----------| Separators */    
+     .sidebar-separator-title {
+         background-color: #132644;
+         height: 35px;
+     }
+     
+     .sidebar-separator {
+         background-color: #132644;
+         height: 25px;
+     }
+     
+     .logo-separator {
+         background-color: #132644;
+         height: 60px;
+     }
+     
+     a.bg-dark {
+         background-color: #132644 !important;
+     }
+     .btn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid midnightblue;
+  }
+ </style>
+ 
+   <script>
+   window.console = window.console || function(t) {};
+ </script>
+   <script>
+   if (document.location.search.match(/type=embed/gi)) {
+     window.parent.postMessage("resize", "*");
+   }
+ </script>
+ <script language="Javascript">
+  function check_hoTen()
+      {
+        check_value = /^[A-Za-z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+$/;
+        var hoten = document.getElementById("HoTen").value;
+        
+        if(check_value.test(hoten) == true )
+        {
+        document.getElementById("error_hoTen").innerHTML="";
+        document.getElementById("CNTT").disabled=false;
+        return true;
+        }
+        else 
+        {
+        document.getElementById("error_hoTen").innerHTML="Họ tên phải là ký tự. ví dụ: Lê Văn Tèo";
+        document.getElementById("CNTT").disabled=true;
+        return false;
+        }
+    
+      }
+      function check_SDT()
+      {
+        check_value = /^[0-9]+$/;
+        var sdt = document.getElementById("SDT").value;
+        
+        if(check_value.test(sdt) == true )
+        {
+        document.getElementById("error_SDT").innerHTML="";
+        document.getElementById("CNTT").disabled=false;
+        return true;
+        }
+        else 
+        {
+        document.getElementById("error_SDT").innerHTML="Vui lòng nhập số điện thoại. Ví dụ:0123456789";
+        document.getElementById("CNTT").disabled=true;
+        return false;
+        }
+      }
+      function check_Pass()
+      {
+        check_value = /^\w+$/;
+        var pass = document.getElementById("Pass").value;
+        
+        if(check_value.test(pass) == true )
+        {
+        document.getElementById("error_Pass").innerHTML="";
+        return true;
+        }
+        else 
+        {
+        document.getElementById("error_Pass").innerHTML="Vui Lòng nhập mật khẩu.";
+        return false;
+        }
+    
+      }
+      function check_Email()
+      {
+        check_value = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var email = document.getElementById("mail").value;
+        
+        if(check_value.test(email))
+          {
+            document.getElementById("error_email").innerHTML="";
+            document.getElementById("CNTT").disabled=false;
+            return true;
+          }
+        else 
+          {
+            document.getElementById("error_email").innerHTML="Email không đúng. ví dụ: tenban@gmail.com";
+            document.getElementById("CNTT").disabled=true;
+            return false
+          }
+      }
+      function check_rePassWord()
+      {
+        Pass = document.getElementById("PassMoi").value;
+        var rePass = document.getElementById("PassLai").value;
+        
+        if(Pass == rePass)
+        {
+         document.getElementById("error_PassLai").innerHTML="";
+         document.getElementById("KTMK").disabled=false;
+         return true;
+        }
+        else
+        {
+         document.getElementById("error_PassLai").innerHTML="Vui lòng nhập đúng với mật khẩu ở trên.";
+         document.getElementById("KTMK").disabled=true;
+         return false;
+        }
+
+      }
+ </script>
+ <script lang="Javascript">
+     var sendajax = function () {
+    //Khoi tao doi tuong
+    var xhttp = new XMLHttpRequest() || ActiveXObject();
+    //Bat su kien thay doi trang thai cuar request
+    xhttp.onreadystatechange = function () {
+        //Kiem tra neu nhu da gui request thanh cong
+        if (this.readyState == 4 && this.status == 200) {
+            //In ra data nhan duoc
+            addData(this.responseText)
+        }
+    }
+    //cau hinh request
+    xhttp.open('GET','/editThongTinCaNhan?TenDN=abc',true);
+    //gui request
+    xhttp.send();
+}
+var addData = function (data) {
+    document.getElementById('result').innerText = data;
+}
+ </script>
+ </head>
+ 
+ <body>
+   <div> 
+ <!-- Bootstrap row -->
+ <div class="row" id="body-row">
+     <!-- Sidebar -->
+     <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+         <!-- Bootstrap List Group -->
+         <ul class="list-group">           
+             <!-- Separator with title -->
+             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                 <small><b>Thông tin</b></small>
+             </li>
+             <!-- /END Separator -->
+             <!-- Menu with submenu -->
+            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start collapsed">
+               <div class="d-flex w-100 justify-content-start align-items-center">
+                   <span class="fa fa-user-circle fa-fw mr-3"></span> 
+                   <span class="menu-collapsed" id="HoTenDN"></span>
+                   <span class="submenu-icon ml-auto"></span>
+               </div>
+            </a>
+           <!-- Submenu content -->
+           <div id="submenu1" class="sidebar-submenu collapse">
+               <a href="/editThongTinCaNhan" class="list-group-item list-group-item-action bg-dark text-white" href="/editThongTinCaNhan">
+                   <span class="menu-collapsed">Cập nhật thông tin</span>
+               </a>
+               
+            <a href="/User" data-toggle="modal" data-target="#myModal2" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Đổi mật khẩu</span>
+                
+            </a>
+            <div class="modal" id="myModal2" 
+                data-backdrop="static"
+                data-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                   <div class="modal-content" style="width: 400px;">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                         <h4 class="modal-title">Đổi mật khẩu</h4>
+                        
+                      </div>
+                      <!-- Modal body -->
+                      <form action="/DoiMK" method="get">
+                      <div class="modal-body">
+                          <table>
+                            <tr>
+                              <td>Mật khẩu cũ:</td> 
+                              <td><input class="input-form" name="MatKhauCu" id ="PassCu" type="password" 
+                              placeholder="Mật khẩu cũ" required />
+                              </td>                         
+                            </tr>
+                            <tr><td colspan="2"><span id ="error_PassCu" style="color: red;"></span></tr></td>
+                            <tr>
+                                <td>Mật khẩu Mới: </td>
+                                <td><input class="input-form" name="MatKhauMoi" id ="PassMoi" type="password" 
+                                placeholder="Mật khẩu Mới" required />
+                                </td>                       
+                            </tr>
+                            <tr><td colspan="2"><span id ="error_PassMoi" style="color: red;"></span></tr></td>
+                            <tr>
+                                <td>Nhập lại mật khẩu: </td>
+                                <td><input class="input-form" name="MatKhau" id ="PassLai" type="password" 
+                                placeholder="Nhập lại mật khẩu" onblur="check_rePassWord()" required />
+                                </td>                      
+                              </tr>
+                              <tr><td colspan="2"><span id ="error_PassLai" style="color: red;"></span></tr></td>
+                            </table>               
+                      </div>
+                      <!-- Modal footer -->
+                      <div style="text-align: center;padding: 10px;">
+                        <button type="submit" id="KTMK" class="btn btn-info">Xác nhận</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>                          
+                      </div>
+                      </form>
+                   </div>
+                </div>
+                </div>
+               <a href="/" class="list-group-item list-group-item-action bg-dark text-white">
+                   <span class="menu-collapsed">Đăng xuất</span>
+               </a>
+           </div>
+             
+             <!-- Separator with title -->
+             <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                 <small><b>Menu</b></small>
+             </li>  
+             <a href="#" class="bg-dark list-group-item list-group-item-action">
+               <div class="d-flex w-100 justify-content-start align-items-center">
+                   <span class="fa fa-comment fa-fw mr-3"></span>
+                   <span class="menu-collapsed">Tin nhắn</span>    
+               </div>
+           </a>                          
+           <a href="#" class="bg-dark list-group-item list-group-item-action">
+               <div class="d-flex w-100 justify-content-start align-items-center">
+                   <span class="fa fa-address-book fa-fw mr-3"></span>
+                   <span class="menu-collapsed">Danh bạ</span>    
+               </div>
+           </a>
+             <!-- Separator without title -->
+             <li class="list-group-item sidebar-separator menu-collapsed"></li>            
+             <!-- /END Separator -->
+             <a href="#" data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
+                 <div class="d-flex w-100 justify-content-start align-items-center">
+                     <span id="collapse-icon" class="fa fa-2x mr-3 fa-angle-double-left"></span>
+                     <span id="collapse-text" class="menu-collapsed">Thu gọn</span>
+                 </div>
+             </a>
+             <!-- Logo -->
+            
+         </ul><!-- List Group END-->
+     </div><!-- sidebar-container END -->
+ 
+         <!-- MAIN -->    
+         <div class="col padding-0"> 
+            <div class="col-xl-4 padding-0" style="border: 1px ridge rgb(134, 134, 125);overflow: auto;height:100%;float: left;padding:10px;">
+               <div class="row" style="border-bottom: 0px solid rgb(134, 134, 125);height: 60px;">
+               <div class="col-8" style="padding-top: 5px;">
+                  <input class="form-control TimKiem" id="InfoSearch" type="search" style="font-family:Arial, FontAwesome" placeholder="&#xF002;Tìm kiếm bạn bè"/>
+               </div> 
+               <!-- Tìm kiếm -->
+               <div class="col-0" style="padding-top: 10px;">
+                  <input type="button" onclick="Tim()" style="font-family:Arial, FontAwesome;width:50px;cursor:pointer;" value="&#xF002;">
+               </div> 
+               <div class="col-0" style="padding: 10px;">
+                <input type="button" id="TaoNhom" style="font-family:Arial, FontAwesome;width:50px;cursor:pointer;" value="&#xf0c0;" onclick="HienThiTaoNhom()">
+              </div> 
+               </div>    
+               
+                  <div class="ds" style="padding-top: 10px;border-bottom: 0px solid rgb(134, 134, 125);cursor:pointer;">
+                     <a href="/DsBan" id="dskb" style="color: black;"><div> <i class="fa fa-user-plus fa-2x"></i> <span style="color: black;margin:10px;">Danh sách kết bạn</span></div></a>
+                  </div> 
+                  <div class="ds" style="padding-top: 10px;border-bottom: 0px solid rgb(134, 134, 125);cursor:pointer;">
+                     
+                    <a style="color: black;" id="DSNhom" ><div> <i class="fa fa-users fa-2x"></i><span style="color: black;margin:15px;">Danh sách nhóm</span> </div></a>
+                  </div>  
+                
+                     <fieldset class="scheduler-border">
+                        <legend class="scheduler-border">Bạn bè</legend>
+                        <div class="control-group" id="tu"></div> 
+                    </fieldset>  
+            </div>       
+            <div class="col-xl-8 padding-0" style="border: 1px ridge rgb(134, 134, 125);height: 100%;float: left;padding:10px;">
+               <div style="padding:10px;" >
+                   <div id="HTdskb" style="" class="row" id="danhSachKB" ></div>
+                   <div id="HienThiGiaoDienKB_div" class="row"  style=""></div>
+                   <div id="HienThiCapNhatTT" class="row"></div>
+                   <!-- Hiển Thị Thành viên Nhóm-->           
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Thành viên</h5>
+                        </div>
+                        <div class="modal-body">
+                          <div id="thanhVienTrongNhom"></div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Hiển Thị Thành viên Nhóm-->
+                  <!-- Hiển Thị Bảng Chat -->
+                  <div id="Chat">                                  
+                       <input type="file" id="HinhAnh"  hidden>
+                       <label style="cursor:pointer;" for="HinhAnh">
+                       <i class="fa fa-image fa-2x"></i></label><br/> 
+                       <input type="text" style="width: 90%;border: 1px solid black;float: left;" class="form-control" id="message" placeholder="Write something..">                           
+                       <button class="btn btn-primary" style="float: right;width: 10%;" id="sendMessage" ><i class="fa fa-paper-plane"></i> Gửi</button>             
+                </div>
+                <script>
+                  $(document).ready(function(){
+                      $("#message").emojioneArea();
+                  })
+              </script>
+                <!-- Hiển Thị Bảng Chat -->
+                    </div>
+                  </div>
+             
+               </div>
+            </div>      
+        </div><!-- Main Col END -->    
+ </div><!-- body-row END -->
+ </div><!-- container --> 
+   <script id="rendered-js">
+
+//  document.getElementById("dskb").onclick = function () {
+//     document.getElementById("HienThiGiaoDienKB_div").style.display = 'none';
+//      document.getElementById("HTdskb").style.display = 'block';
+//  };
+
+ function Tim(){
+      var t = document.getElementById('InfoSearch');
+      window.location="/TimBan?InfoSearch="+t.value;
+    //   document.getElementById("HTdskb").style.display = 'none';
+    //   document.getElementById("HienThiGiaoDienKB_div").style.display = 'block';
+   }
+ // Hide submenus
+ $('#body-row .collapse').collapse('hide');
+ 
+ // Collapse/Expand icon
+ $('#collapse-icon').addClass('fa-angle-double-left');
+ 
+ // Collapse click
+ $('[data-toggle=sidebar-colapse]').click(function () {
+   SidebarCollapse();
+ });
+ 
+ function SidebarCollapse() {
+   $('.menu-collapsed').toggleClass('d-none');
+   $('.sidebar-submenu').toggleClass('d-none');
+   $('.submenu-icon').toggleClass('d-none');
+   $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+ 
+   // Treating d-flex/d-none on separators with title
+   var SeparatorTitle = $('.sidebar-separator-title');
+   if (SeparatorTitle.hasClass('d-flex')) {
+     SeparatorTitle.removeClass('d-flex');
+   } else {
+     SeparatorTitle.addClass('d-flex');
+   }
+ 
+   // Collapse/Expand icon
+   $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+ }
+ //# sourceURL=pen.js
+     </script>
+ 
+ </body></html>
+ 

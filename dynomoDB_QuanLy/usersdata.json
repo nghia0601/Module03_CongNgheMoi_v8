@@ -1,0 +1,52 @@
+[
+  {
+      "TenDN":"Loi",
+      "SDT":"0774771556",
+      "HoTen":"Tạ Đức Lợi",
+      "Email":"loi4@gmail.com",
+      "GioiTinh":"Nam",
+      "Quyen":"User",
+      "TrangThai":"Kích Hoạt",
+      "MatKhau":"1"
+  },
+  {
+    "TenDN":"Nghia",
+    "HoTen":"Hoang Nghia",
+    "Email":"Nghia@gmail.com",
+    "SDT":"0774771557",
+    "GioiTinh":"Nam",
+    "Quyen":"User",
+    "TrangThai":"Kích Hoạt",
+    "MatKhau":"1"
+  },
+  {
+    "TenDN":"Binh",
+    "SDT":"0774771558",
+    "HoTen":"Van Binh",
+    "Email":"Binh@gmail.com",
+    "GioiTinh":"Nam",
+    "Quyen":"User",
+    "TrangThai":"Kích Hoạt",
+    "MatKhau":"1"
+  },  
+  {
+    "TenDN":"Duong",
+    "SDT":"0774771559",
+    "HoTen":"Minh Duong",
+    "Email":"Duong@gmail.com",
+    "GioiTinh":"Nam",
+    "Quyen":"User",
+    "TrangThai":"Kích Hoạt",
+    "MatKhau":"1"
+  },
+  {
+    "TenDN":"Nguyen",
+    "SDT":"0774771550",
+    "HoTen":"Dinh Nguyen",
+    "Email":"Nguyen@gmail.com",
+    "GioiTinh":"Nam",
+    "Quyen":"User",
+    "TrangThai":"Kích Hoạt",
+    "MatKhau":"1"
+  }
+]

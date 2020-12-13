@@ -1,0 +1,41 @@
+#content {
+    width: 100%; height: 450px;
+    overflow-y: scroll;border: 1px solid black;
+    background: none repeat #efefef;
+    display:block;
+    padding: 10px;
+
+
+}
+
+#content p {
+    margin: 5px;
+    
+}
+
+#username, #content, #message, #sendMessage {
+    margin-bottom: 5px;
+}
+.nhom{
+    border: 1px solid black;background-color:#C2BEBE;text-align: center;font-size: 18px;width:240px;border-radius: 20px;margin: 5px;
+    min-height: 400px;
+}
+.DesignChatBenTrai{
+    padding:10px;text-align: left;background-color:#efefef;border-radius:10px;margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height: fit-content;     
+    max-width: 300px; 
+    float: left;
+    clear: both;
+    left: 0;
+    
+}
+.DesignChatBenPhai{
+    padding:10px;text-align: right;background-color:#007bff;border-radius:10px;margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    height: auto;  
+    color: white;
+    float: right;
+    clear: both;
+    max-width: 300px; 
+}

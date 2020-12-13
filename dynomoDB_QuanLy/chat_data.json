@@ -1,0 +1,129 @@
+[
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232300,
+        "NoiDung":"Hello ",
+        "ThoiGian":"12:46:06 PM - 12-06-2020",
+        "NguoiGui":"Loi",
+        "NguoiNhan":"Nghia",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232304,
+        "NoiDung":"Hi",
+        "ThoiGian":"12:47:10 PM - 12-06-2020",
+        "NguoiGui":"Nghia",
+        "NguoiNhan":"Loi",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232308,
+        "NoiDung":"Hom nay an gi ?",
+        "ThoiGian":"12:48:20 PM - 12-06-2020",
+        "NguoiGui":"Loi",
+        "NguoiNhan":"Nghia",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232312,
+        "NoiDung":"Banh Mi1",
+        "ThoiGian":"12:53:22 PM - 12-06-2020",
+        "NguoiGui":"Nghia",
+        "NguoiNhan":"Loi",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232316,
+        "NoiDung":"Banh Mi2",
+        "ThoiGian":"12:54:22 PM - 12-06-2020",
+        "NguoiGui":"Nghia",
+        "NguoiNhan":"Loi",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232320,
+        "NoiDung":"Banh Mi3",
+        "ThoiGian":"12:55:22 PM - 12-06-2020",
+        "NguoiGui":"Nghia",
+        "NguoiNhan":"Loi",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232324,
+        "NoiDung":"Banh Mi4",
+        "ThoiGian":"12:56:22 PM - 12-06-2020",
+        "NguoiGui":"Nghia",
+        "NguoiNhan":"Loi",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232328,
+        "NoiDung":"Banh Mi5",
+        "ThoiGian":"12:57:22 PM - 12-06-2020",
+        "NguoiGui":"Nghia",
+        "NguoiNhan":"Loi",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232332,
+        "NoiDung":"Banh Mi6",
+        "ThoiGian":"12:58:22 PM - 12-06-2020",
+        "NguoiGui":"Nghia",
+        "NguoiNhan":"Loi",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "NghiaLoi",
+        "SapXep": 20201206103232336,
+        "NoiDung":"Banh Mi7",
+        "ThoiGian":"12:59:22 PM - 12-06-2020",
+        "NguoiGui":"Nghia",
+        "NguoiNhan":"Loi",
+        "HinhAnh":"undefined"
+    },
+
+    {
+        "MaChat": "1",
+        "SapXep": 20201206103232340,
+        "NoiDung":"Lợi Chưa Hiểu",
+        "ThoiGian":"12:46:284 PM - 12-06-2020",
+        "NguoiGui":"Loi",
+        "NguoiNhan":"1",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "1",
+        "SapXep": 20201206103232344,
+        "NoiDung":"Lợi Ngu",
+        "ThoiGian":"12:47:284 PM - 12-06-2020",
+        "NguoiGui":"Duong",
+        "NguoiNhan":"1",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "1",
+        "SapXep": 20201206103232348,
+        "NoiDung":"Hôm nay ăn gì",
+        "ThoiGian":"12:48:284 PM - 12-06-2020",
+        "NguoiGui":"Binh",
+        "NguoiNhan":"1",
+        "HinhAnh":"undefined"
+    },
+    {
+        "MaChat": "1",
+        "SapXep": 20201206103232352,
+        "NoiDung":"bánh mì",
+        "ThoiGian":"12:49:284 PM - 12-06-2020",
+        "NguoiGui":"Nghia",
+        "NguoiNhan":"1",
+        "HinhAnh":"undefined"
+    }
+  ]
